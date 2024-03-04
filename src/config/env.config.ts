@@ -13,6 +13,10 @@ class Config {
 	public PORT: string | undefined;
 	public DATABASE_URI: string | undefined;
 	public DB_NAME: string | undefined;
+	public S3_BUCKET_NAME: string | undefined
+	public AWS_REGION: string | undefined
+	public S3_ACCESS_KEY_ID: string | undefined
+	public S3_SECRET_ACCESS_KEY: string | undefined
 	private readonly DEFAULT_DATABASE_URI = "mongodb://127.0.0.1:27017";
 
 	constructor() {
@@ -24,6 +28,11 @@ class Config {
 		this.SECRET = process.env.SECRET;
 		this.DATABASE_URI = process.env.DATABASE_URI ?? this.DEFAULT_DATABASE_URI;
 		this.DB_NAME = process.env.DB_NAME ?? "rest-api-ts";
+		this.S3_BUCKET_NAME = process.env.S3_BUCKET_NAME;
+		this.AWS_REGION = process.env.AWS_REGION;
+		this.S3_ACCESS_KEY_ID = process.env.S3_ACCESS_KEY_ID;
+		this.S3_SECRET_ACCESS_KEY=process.env.S3_SECRET_ACCESS_KEY
+		
 	}
 
 	public validateConfig(): void {
