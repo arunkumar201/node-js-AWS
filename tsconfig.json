@@ -19,6 +19,6 @@
     "sourceMap": true,
     "types": ["node"]
   },
-  "include": ["./src/**/*.ts", ".eslintrc.cjs"],
+  "include": ["./src/**/*.ts", ".eslintrc.cjs", "src/adv-node/index.js"],
   "exclude": ["node_modules"]
 }
